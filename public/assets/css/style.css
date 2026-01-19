@@ -1,0 +1,263 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding-top: 140px; 
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+}
+
+.logo-box {
+    border: 1px solid #e11d48; 
+    border-radius: 4px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracking-tight {
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #fcd34d; 
+    border-radius: 50%;
+    margin: 0 12px;
+}
+
+.btn-signin {
+    background-color: #6366f1;
+    border: none;
+    font-size: 0.95rem;
+    padding: 10px 24px;
+}
+
+.btn-signin:hover {
+    background-color: #4f46e5;
+}
+
+/* BACKGROUND DECORATIONS */
+.bg-shape {
+    position: absolute;
+    top: -140px; 
+    right: 0;
+    width: 40%;
+    height: 1000px;
+    background-color: #fffbeb; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    z-index: -1;
+}
+
+.bg-dots {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    height: 300px;
+    background-image: radial-gradient(#fcd34d 20%, transparent 20%);
+    background-size: 24px 24px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* HERO TEXT */
+.hero-line-1 {
+    font-weight: 900;
+    font-size: 4rem; 
+    letter-spacing: -2px;
+}
+
+.hero-line-2 {
+    font-weight: 800;
+    font-size: 3rem; 
+    letter-spacing: -1.5px;
+    margin-top: 0.5rem;
+}
+
+/* "Fine" Styling */
+.fine-wrapper {
+    position: relative;
+    display: inline-block;
+    color: #e11d48; 
+    z-index: 1;
+}
+
+.fine-bg {
+    position: absolute;
+    bottom: 8px;
+    left: -6px;
+    right: -6px;
+    height: 18px;
+    background-color: #2dd4bf; 
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* GRID CONTENT */
+.description-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.bg-black {
+    background: linear-gradient(180deg, #222 0%, #000 100%);
+}
+
+.bg-dark {
+    background-color: #1c1c1c !important; 
+}
+
+/* Image Text Overlays */
+.overlay-text {
+    position: absolute;
+    z-index: 10;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.bottom-left {
+    bottom: 25px;
+    left: 25px;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    margin-top: 20px;
+}
+
+
+.top-center {
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+/* CTA BUTTON */
+.btn-cta {
+    background-color: #6366f1;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #4f46e5;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-line-1 { font-size: 3rem; }
+    .hero-line-2 { font-size: 2rem; }
+    .bg-shape { width: 100%; height: 60vh; clip-path: none; }
+    
+    .fine-bg { height: 12px; bottom: 5px; }
+
+    .col-lg-3, .col-lg-5, .col-lg-4 {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* =========================================
+   MERGED CSS FROM USER CODE 
+   (Features, Pricing, Footer)
+   ========================================= */
+
+/* VARIABLES (from user code, required for new sections) */
+:root {
+    --primary-color: #5d5fef; 
+    --accent-teal: #4fd1c5;   
+    --accent-red: #f53d50;    
+    --bg-yellow: #fffce3;     
+}
+
+/* FEATURES SECTION */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.bg-pink { background-color: #ef476f; }
+.bg-blue { background-color: #118ab2; }
+.bg-indigo { background-color: #5d5fef; }
+.bg-green { background-color: #06d6a0; }
+
+/* PRICING SECTION */
+.text-decoration-underline {
+    text-decoration-color: #fcd581 !important;
+    text-decoration-thickness: 3px !important;
+}
+
+
+.card .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* FOOTER */
+.footer-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.footer-content {
+    z-index: 1;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social-icon:hover {
+    background-color: #e9ecef;
+}
+
+.bg-warning-subtle {
+    background-color: #fff3cd !important;
+}
+
+/* Form Styles */
+.form-floating > .form-control:focus ~ label, 
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--primary-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    background-color: #e9ecef !important;
+}
