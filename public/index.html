@@ -17,7 +17,6 @@
 
 <body>
 
-    <!-- background pattern -->
     <nav class="navbar navbar-expand-lg fixed-top bg-white">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 text-dark" href="#">
@@ -31,7 +30,6 @@
                 <span class="fs-3 fw-bold tracking-tight">Grid</span>
             </a>
 
-            <!-- navbar-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,92 +68,64 @@
                 <h2 class="display-4 fw-bolder text-dark hero-line-2">To represent a product</h2>
             </div>
 
-            <div class="row g-4">
-                <!-- text above left image -->
-                <div class="col-lg-3 d-flex flex-column gap-4">
-                    <p class="text-secondary mb-0 description-text">
-                        Use mixed grid with imagery, replace with your own photos and descriptions
-                    </p>
-                    <!-- left image under text -->
-                    <div class="card bg-black text-white border-0 rounded-4 p-4 d-flex flex-column justify-content-center text-center flex-grow-1 overflow-hidden "> 
-                        <div class="z-2">
-                            <p class="fw-bold fs-5 lh-sm">We aimed to deliver HQ templates for Figma</p>
-                            <small class="text-white-50 mt-2 d-block">Used by 123 people</small>
-                            <img class="position-relative" src="/assets/images/abstract.jpg" alt="Abstract circle image">
-          
-                        </div>
-                    </div>
-
-                    <a href="#" class="btn btn-primary btn-cta w-100 rounded-pill py-3 fw-bold fs-5">Learn more</a>
-                </div>
-
-                <!-- Images in the middle -->
-                <div class="col-lg-5 d-flex flex-column gap-4">
-                    <div class="bg-dark rounded-4 position-relative overflow-hidden w-100 h-100">
-                        <h3 class="overlay-text bottom-left fw-bold text-white mb-0">Consider it done!</h3>
-                        <img src="/assets/images/Image 2.jpg" alt="An image of a man">
-                    </div>
-
-                    <div class="row g-4 h-100 w-60">
-                        <div class="col-6">
-                            <div class="bg-dark rounded-4 overflow-hidden position-relative w-100">
-                              <img src="/assets/images/books.png" alt="image with books">
+            <!-- I switched to CSS grid here, since in my test file that I submitted to github there was bootstrap grid being used, because i tried experimenting with it to see how it's gonna work (or not gonna work). but then i rewrote this section using css grid, since i double checked the rubric + boostrap grid system gave me A LOT of headache with a girl image. the grid looked fine, but the girl image wouldn't span under letter a image because they were in diffrenet section ) -->
+            <div class="d-flex justify-content-center w-100 overflow-hidden">
+                
+                <div class="hero-css-grid hero-scroll-wrapper">
+    
+                    <div class="grid-left d-flex flex-column gap-4">
+                        <p class="text-secondary mb-0 description-text">
+                            Use mixed grid with imagery, replace with your own photos and descriptions
+                        </p>
+                        <div class="card grid-abstract bg-black text-white border-0 rounded-4 d-flex flex-column flex-grow-1"> 
+                            <div class="z-2 position-relative p-4 mt-4">
+                                <p class="fw-bold fs-5 lh-sm top-center text-white w-100 as text-center mt-4">We aimed to deliver HQ templates for Figma</p>
+                                <small class="text-white-50 text-center d-block">Used by 123 people</small>
                             </div>
-                  
-                            
+                            <img class="grid-bg-img" src="/assets/images/abstract.jpg" alt="Abstract circle image">
                         </div>
-                        <div class="col-6">
-                            <div class="bg-dark rounded-4 w-100 h-100 overflow-hidden position-relative">
-                                <h3 class="overlay-text top-center fw-bold text-white w-100 text-center mt-4">See my goal?</h3>
-                                <img src="/assets/images/person.png" alt="Image of a girl">
-                                
-                            </div>
-                        </div>
+                        <a href="#" class="btn btn-primary btn-cta w-100 rounded-pill py-3 fw-bold fs-5">Learn more</a>
                     </div>
-                </div>
 
-                <div class="col-lg-4 d-flex flex-column gap-4">
-                    <p class="text-secondary mb-0 description-text">
-                        This is multipurpose grid, it fits for portfolio, services or agency web site
-                    </p>
-
-                    <div class="row g-4">
-                        <div class="col-6">
-                            <div class="bg-dark rounded-4 overflow-hidden position-relative w-100 h-100" ></div>
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-dark rounded-4 overflow-hidden position-relative w-100 h-100"></div>
-
-                        </div>
+                    <div class="grid-man bg-dark rounded-4">
+                        <h3 class="overlay-text bottom-center fw-bold text-white mb-0">Consider it done!</h3>
+                        <img src="/assets/images/Image 2.jpg" alt="An image of a man" class="w-100 h-100 object-fit-cover">
                     </div>
-                    <!-- images on the rigth -->
-                    <div class="row g-4">
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="bg-dark rounded-4 overflow-hidden position-relative vertical-card">
-                                    <img src="/assets/images/letter-A.png" alt="Left Girl" class="w-100 h-100 object-fit-cover">
-                                </div>
-                            </div>
 
-                            <div class="col-6 d-flex flex-column gap-4">
-                                <div class="bg-dark rounded-4 overflow-hidden position-relative vertical-card">
-                                    <img src="/assets/images/Imageboot.png" alt="Top Right Girl" class="w-100 h-100 object-fit-cover">
-                                </div>
-
-                                <div class="bg-dark rounded-4 overflow-hidden position-relative vertical-card">
-                                    <img src="/assets/images/window.png" alt="Bottom Right Girl" class="w-100 h-100 object-fit-cover">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="grid-desc">
+                        <p class="text-secondary mb-0 description-text">
+                            This is multipurpose grid, it fits for portfolio, services or agency web site
+                        </p>
                     </div>
+
+                    <div class="grid-letA bg-dark rounded-4">
+                        <img src="/assets/images/letter-A.png" alt="Letter A" class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <div class="grid-stkT bg-dark rounded-4">
+                        <img src="/assets/images/Imageboot.png" alt="Top Right Girl" class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <div class="grid-book bg-dark rounded-4">
+                        <img src="/assets/images/books.png" alt="image with books" class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <div class="grid-girl bg-dark rounded-4">
+                        <h3 class="overlay-text top-center fw-bold text-white w-100 as text-center mt-4 fs-2">See my goal?</h3>
+                        <img src="/assets/images/person.png" alt="Image of a girl" class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <div class="grid-stkB bg-dark rounded-4">
+                        <img src="/assets/images/window.png" alt="Bottom Right Girl" class="w-100 h-100 object-fit-cover">
+                    </div>
+
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Middle section of a webpage  -->
     <section class="features-section py-5">
-        <div class="container py-4">
+        <div class="container py-4 mt-5">
             <div class="row mb-5">
                 <div class="col-lg-7">
                     <h2 class="fw-bold mb-3">Delivering good designs since 1954 🚚💨</h2>
@@ -163,7 +133,6 @@
                 </div>
             </div>
 
-            <!-- services of that section -->
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="icon-circle bg-pink mb-3 text-white">
@@ -171,7 +140,7 @@
                     </div>
                     <h5 class="fw-bold">Support</h5>
                     <p class="text-muted small">Delivering faster and more personalized support with shared screens and cool design systems for Figma.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Learn more</a>
+                    <a href="#" class="btn btn-outline-secondary btn-md rounded-3 px-3">Learn more</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="icon-circle bg-blue mb-3 text-white">
@@ -179,7 +148,7 @@
                     </div>
                     <h5 class="fw-bold">Sales growth</h5>
                     <p class="text-muted small">Identify qualified customers with easy-to-use live chat messaging and AI-based Sales Bot.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Learn more</a>
+                    <a href="#" class="btn btn1 btn-outline-secondary btn-md rounded-3 px-3">Learn more</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="icon-circle bg-indigo mb-3 text-white">
@@ -187,7 +156,7 @@
                     </div>
                     <h5 class="fw-bold">Coponents-driven</h5>
                     <p class="text-muted small">Delivering faster and more personalized support with shared screens and cool design systems for Figma.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Learn more</a>
+                    <a href="#" class="btn btn-outline-secondary btn-md rounded-3 px-3">Learn more</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="icon-circle bg-green mb-3 text-white">
@@ -195,56 +164,69 @@
                     </div>
                     <h5 class="fw-bold">Swap the icon</h5>
                     <p class="text-muted small">You can toggle to any icon within Instances and customize outlined stroke to more bolder or lighter.</p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Learn more</a>
+                    <a href="#" class="btn btn2 btn-outline-secondary btn-md rounded-3 px-3">Learn more</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Affordable pricing section -->
     <section class="pricing-section py-5 bg-light-subtle">
         <div class="container py-4 text-center">
             <h2 class="fw-bold display-5 mb-3">Affordable pricing</h2>
             <div class="d-flex justify-content-center align-items-center gap-2 mb-5 fs-5">
-                <span class="text-muted">Bill me</span>
+                <span class="text-muted fw-bold">Bill me</span>
                 <span class="fw-bold text-primary text-decoration-underline">monthly</span>
-                <span class="text-muted">• yearly</span>
+                <span class="text-muted fw-bold">• yearly</span>
             </div>
 
-            <!--  3 containters with information -->
             <div class="row g-4 align-items-center">
+                
                 <div class="col-lg-4">
                     <div class="card border-0 bg-transparent text-start h-100">
                         <div class="card-body">
-                            <h6 class="fw-bold text-primary text-uppercase mb-2">Free</h6>
-                            <h2 class="fw-bold mb-4">Free <span class="fs-6 fw-normal text-muted">/ FOREVER</span></h2>
+                            <h6 class="fw-bold text-primary mb-2">Free</h6>
+                            <h2 class="fw-bold mb-4">Free <span class="fs-6 fw-bold text-muted">/ FOREVER</span></h2>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-muted me-2"></i> Components-driven system</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-muted me-2"></i> Sales-boosting landing pages</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-muted me-2"></i> Awesome Feather icons pack</li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-muted-light"><i class="bi bi-check-lg"></i></span> Components-driven system
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-muted-light"><i class="bi bi-check-lg"></i></span> Sales-boosting landing pages
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-muted-light"><i class="bi bi-check-lg"></i></span> Awesome Feather icons pack
+                                </li>
                             </ul>
-                            <a href="#" class="btn btn-outline-dark w-100 py-2 rounded-3 fw-bold">Try for free</a>
+                            <a href="#" class="btn btn-outline-dark w-100 py-2 rounded-3 fw-bold mt-5">Try for free</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <!-- making a dropshadow -->
-                    <div class="card border-0 shadow-lg text-start h-100 position-relative">
+                <div class="col-lg-4 position-relative">
+
+                    <div class="card border-0 shadow-lg text-start h-100 position-relative bg-white z-1">
                         <div class="card-body p-4">
-                            <!-- aligning titles tthe top -->
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <h6 class="fw-bold text-primary text-uppercase mb-0"><i class="bi bi-person-fill"></i> Individual</h6>
+                                <h6 class="fw-bold text-primary mb-0"><i class="bi bi-person-fill"></i> Individual</h6>
                                 <span class="badge border border-dark text-dark rounded-pill fw-normal px-2">BEST!</span>
                             </div>
-                            <!-- main content of this block -->
                             <h2 class="fw-bold mb-4">$24 <span class="fs-6 fw-normal text-muted">/ MONTH</span></h2>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i> Components-driven system</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i> Sales-boosting landing pages</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i> Awesome Feather icons pack</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i> Themed into 3 different styles</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i> Will help to learn Figma</li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-warning-light"><i class="bi bi-check-lg"></i></span> Components-driven system
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-warning-light"><i class="bi bi-check-lg"></i></span> Sales-boosting landing pages
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-warning-light"><i class="bi bi-check-lg"></i></span> Awesome Feather icons pack
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-warning-light"><i class="bi bi-check-lg"></i></span> Themed into 3 different styles
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-warning-light"><i class="bi bi-check-lg"></i></span> Will help to learn Figma
+                                </li>
                             </ul>
                             <a href="#" class="btn btn-primary w-100 py-2 rounded-3 fw-bold shadow-sm">Regular license</a>
                         </div>
@@ -254,34 +236,41 @@
                 <div class="col-lg-4">
                     <div class="card border-0 bg-transparent text-start h-100">
                         <div class="card-body">
-                            <h6 class="fw-bold text-primary text-uppercase mb-2"><i class="bi bi-people-fill"></i> Corporate</h6>
-                            <h2 class="fw-bold mb-4">$12 <span class="fs-6 fw-normal text-muted">/ EDITOR</span></h2>
+                            <h6 class="fw-bold text-primary mb-2"><i class="bi bi-people-fill"></i> Corporate</h6>
+                            <h2 class="fw-bold mb-4">$12 <span class="fs-6 fw-bold text-muted">/ EDITOR</span></h2>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Components-driven system</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Sales-boosting landing pages</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Awesome Feather icons pack</li>
-                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Themed into 3 different styles</li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-success-light"><i class="bi bi-check-lg"></i></span> Components-driven system
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-success-light"><i class="bi bi-check-lg"></i></span> Sales-boosting landing pages
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-success-light"><i class="bi bi-check-lg"></i></span> Awesome Feather icons pack
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <span class="check-circle check-success-light"><i class="bi bi-check-lg"></i></span> Themed into 3 different styles
+                                </li>
                             </ul>
-                            <a href="#" class="btn btn-outline-dark w-100 py-2 rounded-3 fw-bold">Extended license</a>
+                            <a href="#" class="btn btn-outline-dark w-100 py-2 rounded-3 mt-5 fw-bold">Extended license</a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
 
-    <!-- footer section -->
     <footer class="footer-section position-relative mt-5">
         <div class="footer-wave">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#fff9c4" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,213.3C1120,224,1280,224,1360,224L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
             </svg>
         </div>
-        <!-- list left -->
         <div class="container footer-content position-relative pb-5">
             <div class="row">
-                <div class="col-md-6">
+               <div class="col-md-6">
                     <div class="row">
                         <div class="col-12 mb-5">
                             <h6 class="text-uppercase fw-bold text-muted small letter-spacing-2 mb-3">Follow Us</h6>
@@ -296,22 +285,21 @@
                         <div class="col-12">
                             <h6 class="text-uppercase fw-bold text-muted small letter-spacing-2 mb-4">Information</h6>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <ul class="list-unstyled d-flex flex-column gap-3">
                                         <li><a href="#" class="text-dark text-decoration-none">About Faster app</a></li>
                                         <li><a href="#" class="text-dark text-decoration-none">Get in Touch</a></li>
                                         <li><a href="#" class="text-dark text-decoration-none">Things We Like</a></li>
                                     </ul>
                                 </div>
-                                <!-- left part, rigth column -->
-                                <div class="col-6">
+                                <div class="col-4">
                                     <ul class="list-unstyled d-flex flex-column gap-3">
                                         <li><a href="#" class="text-dark text-decoration-none text-decoration-underline">Onhovered / Active</a></li>
                                         <li><a href="#" class="text-dark text-decoration-none">Privacy Policy</a></li>
                                         <li><a href="#" class="text-dark text-decoration-none">Terms of Service</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-6 mt-3 offset-6">
+                                <div class="col-4">
                                     <ul class="list-unstyled d-flex flex-column gap-3">
                                         <li><a href="#" class="text-dark text-decoration-none">We are hiring!</a></li>
                                         <li><a href="#" class="text-dark text-decoration-none">Resources</a></li>
@@ -321,13 +309,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- right side -->
                 <div class="col-md-6 d-none d-md-block ps-lg-5">
                     <h6 class="text-uppercase fw-bold text-muted small letter-spacing-2 mb-2">Follow Us</h6>
                     <h3 class="fw-bold text-primary mb-5">hello@fasterapp.com</h3>
                     <h6 class="text-uppercase fw-bold text-muted small letter-spacing-2 mb-4">Keep In Touch</h6>
 
-                    <!-- contact form section -->
                     <form class="contact-form">
                         <div class="row g-3 mb-3">
                             <div class="col-6">
@@ -349,7 +335,6 @@
                             <div class="col-8">
                                 <div class="form-floating bg-light rounded-3">
                                     <textarea class="form-control bg-transparent border-0" placeholder="Leave your message" id="message"></textarea>
-                                    <!-- ooptinal label for a filed -->
                                     <label for="message" class="text-primary fw-bold">Leave your message|</label>
                                     <i class="bi bi-pencil-square position-absolute top-50 end-0 translate-middle-y me-3 text-primary"></i>
                                 </div>
@@ -366,4 +351,3 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
